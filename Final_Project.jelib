@@ -163,11 +163,11 @@ E~BL||D5G2;|pin@10||O
 X
 
 # Cell column_driver;1{sch}
-Ccolumn_driver;1{sch}||schematic|1776200800001|1776663173393|
+Ccolumn_driver;1{sch}||schematic|1776200800001|1776664667907|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Icolumn_driver;1{ic}|column_d@0||62.5|34.5|||D5G4;
 NOff-Page|conn@0||-11|0.5||||
-NOff-Page|conn@1||-13|23.325||||
+NOff-Page|conn@1||-17|23.325||||
 NOff-Page|conn@2||-10.5|-3||||
 NOff-Page|conn@3||17.75|28.325||||
 NOff-Page|conn@4||19.5|14||||
@@ -188,7 +188,11 @@ NWire_Pin|pin@21||20.5|24.325||||
 NWire_Pin|pin@22||44.5|24.325||||
 NWire_Pin|pin@23||5|24.325||||
 NWire_Pin|pin@24||5|22.325||||
-NWire_Pin|pin@25||-5|23.325||||
+NWire_Pin|pin@25||-9|23.325||||
+NWire_Pin|pin@26||-9|23.5||||
+NWire_Pin|pin@27||5|25.5||||
+NWire_Pin|pin@28||3|22.325||||
+Iprecharge;1{ic}|precharg@0||-1|23|||D5G4;
 Iwrite_driver;1{ic}|write_dr@0||-1|-6.5|||D5G4;
 Awire|net@14|||0|conn@4|y|21.5|14|pin@5||20|14
 Awire|net@25|||900|write_dr@0|~BL|4|-3|pin@13||4|-3
@@ -211,7 +215,13 @@ Awire|net@46|||2700|inv@2|y|44.5|24.325|pin@22||44.5|24.325
 Awire|net@47|||0|conn@5|a|52.5|24.325|pin@22||44.5|24.325
 Awire|net@48|||0|pin@16||9|24.325|pin@23||5|24.325
 Awire|net@49|||0|pin@1||12|22.325|pin@24||5|22.325
-Awire|net@50|||1800|conn@1|y|-11|23.325|pin@25||-5|23.325
+Awire|net@50|||1800|conn@1|y|-15|23.325|pin@25||-9|23.325
+Awire|net@51|||2700|pin@25||-9|23.325|pin@26||-9|23.5
+Awire|net@52|||0|precharg@0|PRE|-5|23.5|pin@26||-9|23.5
+Awire|net@53|||1800|precharg@0|BL|3|25.5|pin@27||5|25.5
+Awire|net@54|||2700|pin@23||5|24.325|pin@27||5|25.5
+Awire|net@55|||2700|precharg@0|~BL|3|21.5|pin@28||3|22.325
+Awire|net@56|||0|pin@24||5|22.325|pin@28||3|22.325
 EBL||D5G2;X-0.5;|conn@3|a|O
 EDin||D5G2;|conn@0|a|I
 EDout||D5G2;|conn@5|a|O
@@ -911,39 +921,32 @@ Ephi2||D5G2;|conn@2|a|O
 X
 
 # Cell precharge;1{ic}
-Cprecharge;1{ic}||artwork|1776664455317|1776664557605|E
+Cprecharge;1{ic}||artwork|1776664455317|1776664639662|E
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Nschematic:Bbox|node@0||0|0.5|-6|-2||
 Nschematic:Bus_Pin|pin@0||4|2.5||||
 Nschematic:Wire_Pin|pin@1||2|2.5||||
-Nschematic:Bus_Pin|pin@2||4|0.5||||
-Nschematic:Wire_Pin|pin@3||2|0.5||||
 Nschematic:Bus_Pin|pin@4||-4|0.5||||
 Nschematic:Wire_Pin|pin@5||-2|0.5||||
 Nschematic:Bus_Pin|pin@6||4|-1.5||||
 Nschematic:Wire_Pin|pin@7||2|-1.5||||
 Ngeneric:Invisible-Pin|pin@8||0|0|||||ART_message(D5G1;)Spre
 Aschematic:wire|net@0|||1800|pin@1||2|2.5|pin@0||4|2.5
-Aschematic:wire|net@1|||1800|pin@3||2|0.5|pin@2||4|0.5
 Aschematic:wire|net@2|||0|pin@5||-2|0.5|pin@4||-4|0.5
 Aschematic:wire|net@3|||1800|pin@7||2|-1.5|pin@6||4|-1.5
 EBL||D5G2;|pin@0||O
-EDout||D5G2;|pin@2||O
 EPRE||D5G2;X-1;|pin@4||I
 E~BL||D5G2;|pin@6||O
 X
 
 # Cell precharge;1{sch}
-Cprecharge;1{sch}||schematic|1776200600001|1776664455317|
+Cprecharge;1{sch}||schematic|1776200600001|1776664630847|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@5||-1|15|||RRR|
 NOff-Page|conn@6||0|-12.5||||
 NOff-Page|conn@7||20|-5.5||||
-NOff-Page|conn@8||19|-10||||
 NGround|gnd@0||-20|7.5||||
 NGround|gnd@1||18|6.5||||
-Iinv;1{ic}|inv@0||-2|-7.5|||D5G4;
-Iinv;1{ic}|inv@1||10|-10|||D5G4;
 NWire_Pin|pin@12||-6.5|10||||
 NWire_Pin|pin@13||5|10||||
 NWire_Pin|pin@27||-1|10||||
@@ -974,9 +977,6 @@ NWire_Pin|pin@54||-3|-12.5||||
 NWire_Pin|pin@55||9|0.5||||
 NWire_Pin|pin@56||9|-5.5||||
 NWire_Pin|pin@57||16|-5.5||||
-NWire_Pin|pin@58||-7|0.5||||
-NWire_Pin|pin@59||5|-7.5||||
-NWire_Pin|pin@60||16|-10||||
 NTransistor|pmos@6||-11|10|||XR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D1.0|ATTR_width(D5G1;X0.5;Y-1;)D2.0
 NTransistor|pmos@7||8.5|10|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S1|ATTR_width(D5G1;X0.5;Y-1;)S2
 NTransistor|pmos@8||-17|10|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S1|ATTR_width(D5G1;X0.5;Y-1;)S2
@@ -1027,15 +1027,8 @@ Awire|net@98|||1800|pin@55||9|0.5|pin@49||11.5|0.5
 Awire|net@99|||900|pin@55||9|0.5|pin@56||9|-5.5
 Awire|net@100|||1800|pin@56||9|-5.5|pin@57||16|-5.5
 Awire|net@101|||1800|pin@57||16|-5.5|conn@7|a|18|-5.5
-Awire|net@102|||1800|pin@52||-10.5|0.5|pin@58||-7|0.5
-Awire|net@103|||1800|pin@58||-7|0.5|pin@48||-3|0.5
-Awire|net@104|||900|pin@58||-7|0.5|inv@0|a|-7|-7.5
-Awire|net@105|||1800|inv@0|y|2|-7.5|pin@59||5|-7.5
-Awire|net@106|||2700|inv@1|a|5|-10|pin@59||5|-7.5
-Awire|net@107|||1800|inv@1|y|14|-10|pin@60||16|-10
-Awire|net@108|||1800|pin@60||16|-10|conn@8|a|17|-10
+Awire|net@110|||1800|pin@52||-10.5|0.5|pin@48||-3|0.5
 EBL||D5G2;|conn@6|a|O
-EDout||D5G2;|conn@8|a|O
 EPRE||D5G2;|conn@5|a|I
 E~BL||D5G2;|conn@7|a|O
 X
